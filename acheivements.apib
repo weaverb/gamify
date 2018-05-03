@@ -1,0 +1,34 @@
+FORMAT: 1A
+
+# Gamify
+
+An API for manageing Acheivements and Acheivement Properties.  This is the basic system for creating Acheivements and the activation rules.
+
+# Group Acheivements
+
+## Acheivement [/acheivement]
+
+    + Attributes (array[Acheivement])
+
+### List All Acheivements [GET]
+Returns a list of all Acheivements.
+
++ Response 200 (application/json; charset=utf-8)
+
+    + Attributes (array[Acheivement])
+
+
+# Data Structures
+
+##  Acheivement (object)
++ `title`: `Caffeine and Adorohl` (string, required) - The title text of the Acheivement.
++ `image`: `caffeine_and_adorohl.png` (string) - An *optional* image for the acheivement.
++ `properties` (array[Property], required) - Array of conditions needed to unlock.
++ `unlocked`: `true` (boolean, required) - Whether or not the Acheivement is unlocked.
+
+## Property (object)
++ `name`: `num_commits` (string, required) - The name of the property.
++ `value`: `106` (number, required) - The current value of the property.
++ `activation`: `GREATER_THAN_100` (string, required) - The activation rule.
++ `activation_value`: `100` (number, required) - The threshold that determines the property is active.
++ `initial_value`: `0` (number, required) - The starting value of the property. 

@@ -1,0 +1,21 @@
+{
+  "name": "gamify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dredd": "$(npm bin)/dredd",
+    "test": "dredd",
+    "docs": "$(npm bin)/docprint -p 'acheivements.apib' -d './doc'"
+  },
+  "author": "bryanweaver@outlook.com",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "npm": "^6.0.0"
+  },
+  "devDependencies": {
+    "docprint": "^1.9.0",
+    "dredd": "^5.1.6"
+  }
+}

@@ -1,0 +1,1 @@
+docker run -it --rm -v $PWD:/doc bukalapak/snowboard html -o docs/output.html acheivements.apib
